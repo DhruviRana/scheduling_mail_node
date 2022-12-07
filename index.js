@@ -50,6 +50,6 @@ app.get('/sendmail', (req, res) => {
         console.log("running a task every 10 second");
         sendMail();
     });
-    // res.send("hello");
+    res.send("hello");
 
 });
