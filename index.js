@@ -6,7 +6,7 @@ const cron = require('node-cron');
 const { response } = require('express');
 const port = process.env.PORT || 3000;
 var server = app.listen(port, () => {
-    console.log("start");
+    console.log(`server started on port ${port}`);
 })
 app.get('/sendmail', (req, res) => {
     response1 = {
