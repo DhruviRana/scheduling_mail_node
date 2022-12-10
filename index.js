@@ -44,12 +44,12 @@ app.get('/sendmail', (req, res) => {
     }
     var cron2 = "" + response1.crons + "";
     console.log(cron2);
-    var cron3 = "*/10 * * * * *";
+    var cron3 = "1 12 9 10 * *";
     console.log(cron3);
     cron.schedule(cron2, function() {
         console.log("running a task every 10 second");
         sendMail();
+        res.send("hello");
     });
-    res.send("hello");
 
 });
